@@ -37,8 +37,12 @@ class Searchpage extends Component {
       if (this.props.loading === true || typeof this.props.payload === 'undefined') {
           return (
               <div>
-                  <div className="loading">
-                    <p>Loading search... </p>
+                  <div className="main products-container">
+                      <div className="row">
+                          <div className="loading">
+                            <p>Loading search... </p>
+                          </div>
+                      </div>
                   </div>
               </div>
           );
@@ -60,7 +64,11 @@ class Searchpage extends Component {
 
         return (
             <div>
-                <p>No results found!</p>
+                <div className="main container products-container">
+                    <div className="row">
+                        <p className="notice">Whooops! Nothing has been found. Try another search?</p>
+                    </div>
+                </div>
             </div>
         )
 
@@ -70,9 +78,15 @@ class Searchpage extends Component {
           return (
               <div>
 
-                  {this.props.payload[0].data.map(function(product, i){
-                     return <ProductsComponent key={i} data={product}/>
-                  })}
+                  <div className="main container products-container">
+                      <div className="row">
+
+                          {this.props.payload[0].data.map(function(product, i){
+                             return <ProductsComponent key={i} data={product}/>
+                          })}
+
+                      </div>
+                  </div>
 
               </div>
 

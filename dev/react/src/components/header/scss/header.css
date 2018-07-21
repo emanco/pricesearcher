@@ -53,6 +53,61 @@
 /*
   Icon Container sizing
 */
+/*
+  Usage:
+  @include placeholder {
+    font-style: italic;
+    color: black;
+  }
+*/
+/*
+  Returns a media queries which scales the units relative to the xs and lg values
+  Remember, dont be lazy when using this. If you've got other things that need be
+  in media queries for the same element, dont use this.
+
+  Usage: @include scale-pixels('margin-top', 25px, 125px);
+
+  Returns:
+
+  padding:25px
+
+  @media (min-width:768px){
+    padding:50px;
+  }
+
+  @media (min-width:992px){
+    padding:80px;
+  }
+
+  @media (min-width:1200px){
+    padding:115px;
+  }
+
+  @media (min-width:1500px){
+    padding:125px;
+  }
+*/
+/*
+  Pass in a colour and it gives you a button, BOOM.
+*/
+/*
+  Pass in 2 colours and it gives you a button width a gradient, BOOM.
+*/
+/*
+  Bootstrap size mixins
+*/
+/*
+ Viewport sized typography with minimum and maximum values
+
+ @param {Number}   $min         - Minimum font size (px)
+ @param {Number}   $max         - Maximum font size (px)
+
+  Example scss - 2.79vw font size (with 53px fallback),
+  @include responsive-font(20px, 53px);
+*/
+/*
+  Icon Container sizing
+*/
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: 400; }
@@ -193,3 +248,47 @@ h1, h2, h3, h4, h5, h6 {
 
 .heading2 {
   font-weight: 400; }
+
+header {
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #eaeaea;
+  z-index: 2; }
+  header .row {
+    padding: 15px 20px;
+    display: table;
+    width: 100%; }
+    header .row .inner {
+      display: inline-block;
+      vertical-align: middle;
+      width: 100%;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%); }
+    header .row .logo, header .row .search {
+      display: table-cell;
+      height: 4em; }
+      @media (max-width: 767px) {
+        header .row .logo, header .row .search {
+          display: block; } }
+      @media (min-width: 768px) {
+        header .row .logo, header .row .search {
+          display: block; } }
+    header .row .logo {
+      position: relative; }
+      header .row .logo .inner {
+        font-family: "Graphik";
+        font-size: 2em;
+        font-weight: 100; }
+        header .row .logo .inner a {
+          color: #000;
+          transition: color 0.5s ease-out; }
+          header .row .logo .inner a:hover {
+            color: #333; }
+    header .row .search form {
+      width: 100%; }
+    header .row .search .form-control {
+      height: 4em;
+      width: 100%; }

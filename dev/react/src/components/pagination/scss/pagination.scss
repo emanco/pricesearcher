@@ -1,0 +1,22 @@
+nav {
+  text-align: center;
+  padding: 20px;
+  display: inline-block;
+  width: 100%;
+
+  .pagination {
+    margin: 0 auto;
+
+
+    a {
+      color: #000;
+      opacity: 0.5;
+      
+      &.active, &:hover {
+        color: #000;
+        opacity: 1;
+      }
+    }
+  }
+}
+

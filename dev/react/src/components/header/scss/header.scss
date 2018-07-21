@@ -1,0 +1,72 @@
+@import "./../../../scss/base/1_vars.scss";
+@import "./../../../scss/base/2_mixins.scss";
+@import "./../../../scss/base/3_typography.scss";
+
+header {
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #eaeaea;
+  z-index: 2;
+
+  .row {
+    padding: 15px 20px;
+    display: table;
+    width: 100%;
+
+    .inner {
+      display: inline-block;
+      vertical-align: middle;
+      width: 100%;
+
+      @include vertical-align();
+    }
+
+    .logo, .search {
+      display: table-cell;
+      height: 4em;
+
+      @include xs {
+        display: block;
+      }
+      
+      @include sm {
+        display: block;
+      }
+    }
+
+
+    .logo {
+      position: relative;
+      
+      .inner {
+        font-family: $font-heading;
+        font-size: 2em;
+        font-weight: 100;
+        
+        a {
+          color: #000;
+          transition: color 0.5s ease-out;
+         
+          &:hover {
+            color: #333;
+          }
+        }
+      }
+    }
+
+    .search {
+
+      form {
+        width: 100%;
+      }
+
+      .form-control {
+        height: 4em;
+        width: 100%;
+      }
+    }
+  }
+
+}

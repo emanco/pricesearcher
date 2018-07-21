@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import './../../scss/components/header.css';
+import './scss/header.css';
 
 import { Link, withRouter } from 'react-router-dom';
-
-// Ionicons
-//import Ionicon from 'react-ionicons';
 
 class HeaderView extends Component {
 
@@ -35,21 +32,22 @@ class HeaderView extends Component {
 
         return (
             <div>
-                <header className="nav-container nav-height">
-                    <i className="ion-ios-search"></i>
+                <header className="container-fluid">
+                    <div className="row">
+                            <div className="col-sm-3 logo">
+                                <div className="inner">
+                                    <Link to="/" activeclassname="active">PriceSearcher</Link>
+                                </div>
+                            </div>
 
-                    <form onSubmit={this.handleSubmit}>
-                        <input type="text" className="form-control search" placeholder="search" onChange={this.handleChange}/>
-                    </form>
-                    
-                    <div className="pagination">
-                        <ul>
-                            <li>
-                                <Link to={'/page/${pageid}'} activeClassName="current">2</Link>
-                            </li>
-                        </ul>
+                            <div className="col-sm-9 search">
+                                <div className="inner">
+                                    <form onSubmit={this.handleSubmit}>
+                                        <input type="text" className="form-control" placeholder="Type a search term and hit enter!" onChange={this.handleChange}/>
+                                    </form>
+                                </div>
+                            </div>
                     </div>
-
                 </header>
             </div>
         );

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 // import PriceComponent from "../price/component";
+import { Link, withRouter } from 'react-router-dom';
 
-// import '../../scss/components/orders.css';
+import './scss/products.css';
 
 class ProductsView extends Component {
 
@@ -23,16 +24,40 @@ class ProductsView extends Component {
 
         return (
 
-            <div>
-                <div><a href={"/products/"+$this.props.data.product_id}>Product ID {$this.props.data.product_id}</a></div>
-                <div>Name {$this.props.data.product_name}</div>
-                <div>Brand {$this.props.data.brand}</div>
-                <div><img src={$this.props.data.image_url} alt={$this.props.data.product_name}/></div>
-                <div>Price {$this.props.data.price}</div>
-                <div>Description {$this.props.data.description}</div>
-                <div>Category {$this.props.data.ps_category}</div>
+            <div className="col-md-2 item">
+                <div className="inner">
+                    <div>
+                        <Link to={"/products/"+$this.props.data.product_id}>
+                            <div className="picture" style={{backgroundImage:'url('+$this.props.data.image_url+')'}}>
+                            </div>
+                        </Link>
+                    </div>
 
-                {console.log(this.props.data.price_history)}
+                    <div className="product-infos">
+
+                        <span>{$this.props.data.ps_category}</span>
+
+                        <Link to={"/products/"+$this.props.data.product_id}>
+                            <p>{$this.props.data.product_name}</p>
+                        </Link>
+
+                        <div className="price">
+                            £ {$this.props.data.price}
+                        </div>
+                    </div>
+                </div>
+
+                {/*<div><a href={"/products/"+$this.props.data.product_id}>Product ID {$this.props.data.product_id}</a></div>*/}
+
+
+
+
+                {/*<div>Price {$this.props.data.price}</div>*/}
+
+                {/*<div>Description {$this.props.data.description}</div>*/}
+                {/*<div>Category {$this.props.data.ps_category}</div>*/}
+
+                {/*{console.log(this.props.data.price_history)}*/}
                 {/*{$this.props.data.price_history.map(i=> {return (i);})}*/}
             </div>
 
@@ -42,4 +67,4 @@ class ProductsView extends Component {
     }
 }
 
-export default ProductsView;
+export default withRouter(ProductsView);

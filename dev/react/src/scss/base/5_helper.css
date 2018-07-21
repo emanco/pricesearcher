@@ -377,7 +377,7 @@
   background-color: #e8e9e9; }
 
 .veil {
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   bottom: 0;
   position: fixed;
   top: 0;

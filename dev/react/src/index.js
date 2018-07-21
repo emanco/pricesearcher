@@ -16,11 +16,7 @@ import Searchpage from "./pages/search/page";
 
 
 //Components
-//import NavigationComponent from './components/navigation/component';
-
- import HeaderComponent from './components/header/view';
- // import BreadcrumbsComponent from './components/breadcrumbs/view';
-
+import HeaderComponent from './components/header/view';
 import FooterComponent from './components/footer/view';
 
 
@@ -42,10 +38,7 @@ import "./scss/base/3_typography.css";
 import "./scss/base/4_global.css";
 import "./scss/base/5_helper.css";
 import "./scss/base/bootstrap_overrides.css";
-import "./scss/base/components.css";
-import "./scss/base/forms.css";
-import "./scss/base/general.css";
-//import "./scss/base/nav.css";
+import "./scss/base/main.css";
 
 //console.log('jquery'+$);
 

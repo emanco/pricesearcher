@@ -19,7 +19,7 @@ const getProducts = (id, page) => {
             console.log('found page');
             return loader.get('products/?_page='+page+'&_limit=30');
         } else {
-            return loader.get('products/?_page=2&_limit=30');
+            return loader.get('products/?_page=1&_limit=30');
         }
 
     }

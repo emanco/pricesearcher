@@ -188,7 +188,7 @@ h1, h2, h3, h4, h5, h6 {
       font-size: 59.95px; } }
 
 .heading1 {
-  font-family: "nimbus-sans";
+  font-family: "Graphik";
   color: #222222; }
 
 .heading2 {
@@ -205,7 +205,7 @@ body {
   color: #222222;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
-  font-family: "nimbus-sans";
+  font-family: "Graphik";
   font-size: 20px;
   font-size: 1.04167vw;
   font-weight: 300;

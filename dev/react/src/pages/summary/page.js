@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import ProductsComponent from '../../components/products/component';
 import ProductComponent from '../../components/product/component';
 
+import PaginationView from '../../components/pagination/view';
+
 // import CustomerComponent from '../../components/customers/component';
 // import OrderComponent from '../../components/orders/component';
 // import PrescriptionComponent from '../../components/prescriptions/component';
@@ -26,6 +28,14 @@ class Summarypage extends Component {
         console.log('mounted');
     }
 
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.location.pathname !== this.props.location.pathname) {
+            //console.log('next props: '+nextProps.location.pathname);
+            this.props.dispatch(getData(nextProps.match.params.productid,nextProps.match.params.pageid));
+            //take action here
+        }
+    }
+
   render() {
 
 
@@ -34,8 +44,12 @@ class Summarypage extends Component {
       if (this.props.loading === true || typeof this.props.payload === 'undefined') {
           return (
               <div>
-                  <div className="loading">
-                    <p>Loading... </p>
+                  <div className="main container products-container">
+                      <div className="row">
+                          <div className="loading">
+                            <p>Loading... </p>
+                          </div>
+                      </div>
                   </div>
               </div>
           );
@@ -57,7 +71,11 @@ class Summarypage extends Component {
 
         return (
             <div>
-                <ProductComponent data={this.props.payload[0].data[0]}/>
+                <div className="main container product-container">
+                    <div className="row">
+                        <ProductComponent data={this.props.payload[0].data[0]}/>
+                    </div>
+                </div>
             </div>
         )
 
@@ -67,33 +85,19 @@ class Summarypage extends Component {
           return (
               <div>
 
-                  {this.props.payload[0].data.map(function(product, i){
-                     return <ProductsComponent key={i} data={product}/>
-                  })}
+                  <div className="main container products-container">
 
+                      <div className="row">
 
-                  {/*<div className="left-panel">
-
-
-                      <CustomerComponent customerid={$id} data={this.props.payload[0].data}/>
-
-
-                      <section className="component component-customer-orders row">
-                          <h2 className="heading2 heading">
-                              Orders
-                              <button className="btn -add">Place Order</button>
-                          </h2>
-                          <p className="sub-text">Showing {this.props.payload[1].data[0].limit} of {this.props.payload[1].data[0].count} </p>
-
-                          {this.props.payload[1].data[0].results.map(function(order, i) {
-                              return <OrderComponent key={i} id={i} customerid={$id} data={order} />
+                          {this.props.payload[0].data.map(function(product, i){
+                             return <ProductsComponent key={i} data={product}/>
                           })}
 
-                      <button className="btn">View More</button>
-                      </section>
+                          <PaginationView/>
 
-                     <PrescriptionComponent customerid={$id} data={this.props.payload[2].data} name={this.props.payload[0].data.first_name+' '+this.props.payload[0].data.last_name} />
-                  </div>*/}
+                      </div>
+
+                  </div>
 
               </div>
 
