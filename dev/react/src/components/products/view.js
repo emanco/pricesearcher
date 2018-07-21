@@ -24,7 +24,7 @@ class ProductsView extends Component {
 
         return (
 
-            <div className="col-md-2 item">
+            <div className="col-xs-6 col-sm-4 col-md-3 col-lg-2 item">
                 <div className="inner">
                     <div>
                         <Link to={"/products/"+$this.props.data.product_id}>

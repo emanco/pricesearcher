@@ -1,6 +1,20 @@
+@import "./2_mixins.scss";
+
 .main {
   padding: 8em 20px 20px 20px;
   min-height: 20vh;
+
+  @include xs {
+    padding-top: 12em;
+  }
+
+  @include sm {
+    padding-top: 8em;
+  }
+
+  @include md {
+    padding-top: 8em;
+  }
 
   .notice {
     font-size: 1.5em;

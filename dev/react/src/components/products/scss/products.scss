@@ -16,14 +16,17 @@
 
       @include xs {
         height: auto;
+        padding-bottom: 140px;
       }
 
       @include sm {
         height: auto;
+        padding-bottom: 120px;
       }
 
       @include md {
-        height: 330px;
+        //height: 330px;
+        padding-bottom: 120px;
       }
 
       .picture {

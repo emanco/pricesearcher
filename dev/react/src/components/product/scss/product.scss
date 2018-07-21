@@ -1,4 +1,13 @@
+@import "./../../../scss/base/2_mixins.scss";
+
 .product-container {
+
+  .col-md-4 {
+    @include md {
+      padding-right: 20px!important;
+    }
+  }
+
   .picture {
     background-size: contain;
     background-position: center center;
@@ -6,5 +15,27 @@
     width: 100%;
     padding-top: 100%;
     display: inline-block;
+  }
+
+  .content {
+    font-size: 1.2em;
+    line-height: 1.5em;
+
+    h5 {
+      text-transform: uppercase;
+      font-weight: 100;
+      font-size: 0.8em;
+      opacity: 0.9;
+      margin-bottom: 1em;
+    }
+
+    p {
+      line-height: 1.5em;
+    }
+  }
+
+  .recharts-responsive-container {
+    font-size: 0.9em;
+    min-height: 200px;
   }
 }
