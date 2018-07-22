@@ -1,9 +1,13 @@
+import {baseURL, key} from '../../constants/endpoints';
+
 import axios from 'axios';
 
 
 const loader = axios.create({
-    baseURL: 'https://pricesearcher-frontend-test.herokuapp.com/',
-    headers: {'x-api-key': '46c0a1e171c76bb37784d60aad4df750'}
+    // baseURL: 'https://pricesearcher-frontend-test.herokuapp.com/',
+    // headers: {'x-api-key': '46c0a1e171c76bb37784d60aad4df750'}
+    baseURL: baseURL,
+    headers: {'x-api-key': key}
 });
 
 // const getCustomer = (id) => {
@@ -17,9 +21,9 @@ const getProducts = (id, page) => {
     } else {
         if (page) {
             console.log('found page');
-            return loader.get('products/?_page='+page+'&_limit=30');
+            return loader.get('products/?_page='+page+'&_limit=30&_sort=price&_order=asc');
         } else {
-            return loader.get('products/?_page=1&_limit=30');
+            return loader.get('products/?_page=1&_limit=30&_sort=price&_order=asc');
         }
 
     }

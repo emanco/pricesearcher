@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.4b0b7e4a.css",
-  "main.css.map": "static/css/main.4b0b7e4a.css.map",
-  "main.js": "static/js/main.2f33e20e.js",
-  "main.js.map": "static/js/main.2f33e20e.js.map",
+  "main.css": "static/css/main.14e0bed5.css",
+  "main.css.map": "static/css/main.14e0bed5.css.map",
+  "main.js": "static/js/main.04cf8f3c.js",
+  "main.js.map": "static/js/main.04cf8f3c.js.map",
   "static/media/Graphik-Light.eot": "static/media/Graphik-Light.d5d97ee9.eot",
   "static/media/Graphik-Light.svg": "static/media/Graphik-Light.7af2e18e.svg",
   "static/media/Graphik-Light.ttf": "static/media/Graphik-Light.bb5690d9.ttf",
@@ -18,10 +18,5 @@
   "static/media/Graphik-Semibold.eot": "static/media/Graphik-Semibold.699d8289.eot",
   "static/media/Graphik-Semibold.svg": "static/media/Graphik-Semibold.6f24f7dd.svg",
   "static/media/Graphik-Semibold.ttf": "static/media/Graphik-Semibold.1e606a01.ttf",
-  "static/media/Graphik-Semibold.woff": "static/media/Graphik-Semibold.7cd92331.woff",
-  "static/media/djoe5cas-webfont.eot": "static/media/djoe5cas-webfont.3523f05a.eot",
-  "static/media/djoe5cas-webfont.svg": "static/media/djoe5cas-webfont.bd8a6c1f.svg",
-  "static/media/djoe5cas-webfont.ttf": "static/media/djoe5cas-webfont.4299bdab.ttf",
-  "static/media/djoe5cas-webfont.woff": "static/media/djoe5cas-webfont.79397b90.woff",
-  "static/media/djoe5cas-webfont.woff2": "static/media/djoe5cas-webfont.2aaea069.woff2"
+  "static/media/Graphik-Semibold.woff": "static/media/Graphik-Semibold.7cd92331.woff"
 }

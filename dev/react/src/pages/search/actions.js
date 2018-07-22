@@ -1,16 +1,17 @@
+import {baseURL, key} from '../../constants/endpoints';
 import axios from 'axios';
 
 
 const loader = axios.create({
-    baseURL: 'https://pricesearcher-frontend-test.herokuapp.com/',
-    headers: {'x-api-key': '46c0a1e171c76bb37784d60aad4df750'}
+    baseURL: baseURL,
+    headers: {'x-api-key': key}
 });
 
 
 const getProducts = (id) => {
     if (id) {
-        console.log('query is '+id);
-        return loader.get('products/?q='+id+'&_limit=100');
+        // console.log('query is '+id);
+        return loader.get('products/?q='+id+'&_limit=100&_sort=price&_order=asc');
     }
 
 }
