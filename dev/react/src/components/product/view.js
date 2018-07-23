@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
-// import PriceComponent from "../price/component";
+import { Link, withRouter } from 'react-router-dom';
+import Ionicon from 'react-ionicons';
 
 import './scss/product.css';
 
@@ -23,6 +24,12 @@ class ProductView extends Component {
         return (
 
             <div className="container">
+                <div className="row">
+                    <div className="back">
+                        <Link to="/" activeclassname="active"><Ionicon icon="md-arrow-back"/> <span>Go Back</span></Link>
+                    </div>
+
+                </div>
                 <div className="row">
 
                     <div className="col-md-4">
@@ -72,4 +79,4 @@ class ProductView extends Component {
     }
 }
 
-export default ProductView;
+export default withRouter(ProductView);

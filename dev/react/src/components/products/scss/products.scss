@@ -12,7 +12,7 @@
       left: 0;
       top: 0;
       width: 100%;
-      padding: 10px;
+      padding: 20px;
       z-index: 0;
       background-color: #fff;
       transition: all 0.3s ease-out;
@@ -29,7 +29,7 @@
 
       @include md {
         //height: 330px;
-        padding-bottom: 150px;
+        padding-bottom: 160px;
       }
 
       .picture {
@@ -44,9 +44,13 @@
         margin-top: 1em;
         position: absolute;
         bottom: 10px;
-        width: calc(100% - 20px);
+        width: calc(100% - 40px);
 
         height: 150px;
+
+        @include md {
+          height: 160px;
+        }
 
         a {
           color: #000;

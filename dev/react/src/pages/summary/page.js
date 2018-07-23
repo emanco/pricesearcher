@@ -4,6 +4,8 @@ import ProductComponent from '../../components/product/component';
 
 import PaginationView from '../../components/pagination/view';
 
+import Ionicon from 'react-ionicons';
+
 // import CustomerComponent from '../../components/customers/component';
 // import OrderComponent from '../../components/orders/component';
 // import PrescriptionComponent from '../../components/prescriptions/component';
@@ -47,7 +49,7 @@ class Summarypage extends Component {
                   <div className="main container products-container">
                       <div className="row">
                           <div className="loading">
-                            <p>Loading... </p>
+                            <p> <Ionicon icon="ios-sync" fontSize="60px" color="#9F111B" rotate={true} /></p>
                           </div>
                       </div>
                   </div>

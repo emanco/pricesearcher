@@ -4,7 +4,8 @@
 
 header {
   position: fixed;
-  background: #fff;
+  background: $brand-color;
+  color:#fff;
   width: 100%;
   display: block;
   border-bottom: 1px solid #eaeaea;
@@ -39,18 +40,24 @@ header {
 
     .logo {
       position: relative;
+      color: #fff;
       
       .inner {
         font-family: $font-heading;
         font-size: 2em;
         font-weight: 100;
+
+        b {
+          font-weight: 500;
+        }
         
         a {
-          color: #000;
-          transition: color 0.5s ease-out;
+          color: #fff;
+          letter-spacing: -0.7pt;
+          transition: all 0.5s ease-out;
          
           &:hover {
-            color: #333;
+            opacity: 0.9;
           }
         }
       }
@@ -62,9 +69,41 @@ header {
         width: 100%;
       }
 
+      .submit {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: #fff;
+        height: 100%;
+        background: transparent;
+        appearance:none;
+        border: none;
+
+        svg {
+          height: 35px;
+          width: 30px;
+          fill:#fff;
+        }
+      }
+
       .form-control {
-        height: 4em;
+        height: 3em;
         width: 100%;
+        border: none;
+        border-radius:0;
+        background: transparent;
+        border-bottom: 2px solid #fff;
+        padding-left: 0;
+        color: #fff;
+        font-size: 1.4em;
+        font-family: $font-heading;
+        appearance:none;
+        box-shadow: none!important;
+
+        &::placeholder {
+          color: #fff;
+          opacity: 0.9;
+        }
       }
     }
   }

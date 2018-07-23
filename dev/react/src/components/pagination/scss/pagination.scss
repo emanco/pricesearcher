@@ -1,3 +1,5 @@
+@import "./../../../scss/base/1_vars.scss";
+
 nav {
   text-align: center;
   padding: 20px;
@@ -7,13 +9,25 @@ nav {
   .pagination {
     margin: 0 auto;
 
+    li {
+      border: none;
+      border-radius: 0;
+    }
 
     a {
-      color: #000;
-      opacity: 0.5;
+      color: #fff;
+      //opacity: 0.5;
+      border-radius: 0!important;
+      background-color: $brand-color;
+      font-size: 1.2em;
+      padding: 10px 20px;
+      font-family: $font-heading;
+      transition: all 0.5s ease-out;
+
       
-      &.active, &:hover {
-        color: #000;
+      &.active, &:hover, &:active {
+        color: #fff;
+        background-color: darken($brand-color, 5%);
         opacity: 1;
       }
     }

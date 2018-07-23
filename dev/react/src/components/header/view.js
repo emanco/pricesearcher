@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Ionicon from 'react-ionicons';
+
 import './scss/header.css';
 
 import { Link, withRouter } from 'react-router-dom';
@@ -36,7 +38,7 @@ class HeaderView extends Component {
                     <div className="row">
                             <div className="col-sm-3 logo">
                                 <div className="inner">
-                                    <Link to="/" activeclassname="active">PriceSearcher</Link>
+                                    <Link to="/" activeclassname="active"><b>Price</b>Searcher</Link>
                                 </div>
                             </div>
 
@@ -44,6 +46,10 @@ class HeaderView extends Component {
                                 <div className="inner">
                                     <form onSubmit={this.handleSubmit}>
                                         <input type="text" className="form-control" placeholder="Type a search term and hit enter!" onChange={this.handleChange}/>
+
+                                        <button type="submit" value="Search" className="submit">
+                                        <Ionicon icon="ios-search" fontSize="60px" />
+                                        </button>
                                     </form>
                                 </div>
                             </div>

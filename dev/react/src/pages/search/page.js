@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import {getData} from "./actions";
 import {withRouter} from "react-router-dom";
 
+import Ionicon from 'react-ionicons';
 
 class Searchpage extends Component {
 
@@ -40,7 +41,7 @@ class Searchpage extends Component {
                   <div className="main products-container">
                       <div className="row">
                           <div className="loading">
-                            <p>Loading search... </p>
+                              <p> <Ionicon icon="ios-sync" fontSize="60px" color="#9F111B" rotate={true} /></p>
                           </div>
                       </div>
                   </div>

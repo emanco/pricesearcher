@@ -46,19 +46,6 @@ class ProductsView extends Component {
                         </div>
                     </div>
                 </div>
-
-                {/*<div><a href={"/products/"+$this.props.data.product_id}>Product ID {$this.props.data.product_id}</a></div>*/}
-
-
-
-
-                {/*<div>Price {$this.props.data.price}</div>*/}
-
-                {/*<div>Description {$this.props.data.description}</div>*/}
-                {/*<div>Category {$this.props.data.ps_category}</div>*/}
-
-                {/*{console.log(this.props.data.price_history)}*/}
-                {/*{$this.props.data.price_history.map(i=> {return (i);})}*/}
             </div>
 
             );

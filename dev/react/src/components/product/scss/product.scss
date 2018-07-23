@@ -1,6 +1,44 @@
+@import "./../../../scss/base/1_vars.scss";
 @import "./../../../scss/base/2_mixins.scss";
 
 .product-container {
+
+  .back {
+
+    a {
+      font-family: $font-heading;
+      color: #fff;
+      font-size: 1em;
+      line-height: 1em;
+      display: inline-table;
+      background-color: $brand-color;
+      padding: 10px 20px 10px 15px;
+      transition: background-color 0.5s ease-out;
+
+      &:hover {
+        background-color: darken($brand-color, 5%);
+      }
+
+      svg, span {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      svg {
+        margin-right: 10px;
+        font-size: 0.8em;
+        height: 1.5em;
+        fill: #fff;
+      }
+
+      span {
+        font-size: 1em;
+        line-height: 1.3em;
+        text-transform: uppercase;
+      }
+    }
+
+  }
 
   .col-md-4 {
     @include md {
@@ -19,7 +57,7 @@
 
   .content {
     font-size: 1.2em;
-    line-height: 1.5em;
+    line-height: 1.6em;
 
     h5 {
       text-transform: uppercase;
@@ -30,7 +68,7 @@
     }
 
     p {
-      line-height: 1.5em;
+      line-height: 1.7em;
     }
   }
 
